@@ -5,7 +5,7 @@ import styles from "./Filter.module.css"
 export function Filter({ value, onFilterChange }) {
     return (
         <>
-            <div>
+            <div className={styles.filter_container}>
                 <p>Find contact by name</p>
                 <input
                     type="text"

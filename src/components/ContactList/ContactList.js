@@ -5,11 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 export function ContactList({ state, onListChange }) {
     console.log('state :>> ', state);
     return (
-        <ul>
+        <ul className={styles.contact_list}>
             {state.map(({ name, number, id }) => (
-                <li key={uuidv4()}>
+                <li className={styles.contact_list_item} key={uuidv4()}>
                     <p>{name}: {number}</p>
-                    <button type="button"
+                    <button className={styles.contact_list_button} type="button"
                         onClick={() => onListChange(id)}>Delete number</button>
                 </li>
             ))
